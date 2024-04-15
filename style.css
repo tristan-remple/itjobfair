@@ -1,0 +1,277 @@
+/*
+Theme Name: IT Job Fair w0226139
+Author: Tristan Remple
+Description: A theme for the NSCC IT Job Fair.
+Version: 1.0
+*/
+
+:root {
+    --orange: #E2792C;
+    --neon: #ff5a00;
+    --rust: #993600;
+    --black: #000;
+    --clear-grey: #0000001a;
+    --clear-dark: #3c3c3c99;
+    --dark-grey: #454d55;
+    --light-grey: #9E9E9E;
+    --white: #FFF;
+    --radius: 5px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: "Nunito", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    min-height: 100vh;
+}
+
+a {
+    color: var(--neon);
+}
+
+a:hover, a:focus {
+    color: var(--dark-grey);
+}
+
+.map {
+    max-width: 50vw;
+    max-height: 60vh;
+}
+
+.section {
+    max-width: 1145px;
+    border-bottom: 1px solid var(--light-grey);
+    padding-bottom: 2rem;
+}
+
+.section:last-child {
+    border-bottom: none;
+}
+
+header {
+    height: 6.25rem;
+    width: 100%;
+    border-bottom: 1px solid var(--light-grey);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#logo, #footer-img {
+    height: 90%;
+    margin-left: 1.5rem;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nav-link, .dropdown-label, .drop-link {
+    padding: 0.5rem 1.25rem;
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--black);
+}
+
+.nav-link:hover, .nav-link:focus,
+.dropdown-label:hover, .dropdown-label:focus,
+.drop-link:hover, .drop-link:focus {
+    color: var(--neon);
+}
+
+.row-end {
+    position: absolute;
+    right: 1.5rem;
+}
+
+.dropdown, .dropdown-content {
+    display: flex;
+    flex-direction: column;
+    z-index: 5;
+}
+
+.dropdown-content {
+    position: absolute;
+    top: 2.25rem;
+    background-color: var(--white);
+    border: 1px solid var(--light-grey);
+    border-radius: var(--radius);
+    display: none;
+}
+
+.drop-link {
+    border-bottom: 1px solid var(--light-grey);
+}
+
+.drop-link:last-child {
+    border-bottom: none;
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown:focus .dropdown-content {
+    display: flex;
+}
+
+.button {
+    padding: 0.5rem 1.25rem;
+    border-radius: var(--radius);
+    border-style: solid;
+    border-width: 1px;
+    text-decoration: none;
+}
+
+.white-button {
+    background-color: var(--white);
+    border-color: var(--neon);
+    color: var(--rust);
+}
+
+.button:hover, .button:focus,
+.orange-button {
+    background-color: var(--orange);
+    border-color: var(--orange);
+    color: var(--white);
+}
+
+.orange-button:hover, .orange-button:focus {
+    color: var(--dark-grey);
+}
+
+.title-card {
+    width: 100%;
+    position: relative;
+}
+
+.title-card .title,
+.title-card a {
+    z-index: 3;
+}
+
+.title-img {
+    width: 100%;
+    z-index: 1;
+}
+
+.title {
+    position: absolute;
+    margin: auto;
+    background-color: var(--clear-dark);
+    padding: 1rem;
+    color: var(--white);
+    bottom: 30%;
+    left: 30%;
+}
+
+.title-card .button {
+    position: absolute;
+    left: 30%;
+    bottom: calc(30% - 3.5rem);
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+h4 {
+    font-size: 1.575rem;
+}
+
+p, li {
+    color: var(--dark-grey);
+    font-size: 1.125rem;
+}
+
+.centered {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.row-wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 80%;
+    align-items: stretch;
+    justify-content: center;
+}
+
+.sponsor {
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border: 1px solid var(--neon);
+    border-radius: var(--radius);
+    width: 45%;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sponsor h4 {
+    margin: 0.25rem;
+    color: var(--dark-grey);
+}
+
+.sponsor-img {
+    width: 100%;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--orange);
+    width: 100%;
+    height: 7.5rem;
+    position: relative;
+}
+
+footer p {
+    color: var(--black);
+    font-size: 1rem;
+}
+
+footer .row {
+    height: 100%;
+}
+
+footer .nav-link:hover,
+footer .nav-link:focus {
+    color: var(--white);
+}
+
+.contact-card {
+    width: 100%;
+    height: 60vh;
+    border: 1px solid var(--light-grey);
+    border-radius: var(--radius);
+    display: flex;
+    flex-direction: row;
+}
+
+.contact-profile {
+    height: 100%;
+}
+
+.block {
+    display: block;
+    padding: 1rem;
+    line-height: 2rem;
+}
